@@ -18,6 +18,6 @@ export const authGuard: CanActivateFn = (
   const session = authService.getAuthSession();
 
   return protectedRouter.includes(state.url) && !session
-    ? router.navigate(['/login'])
+    ? router.navigate(['/auth'])
     : false;
 };
