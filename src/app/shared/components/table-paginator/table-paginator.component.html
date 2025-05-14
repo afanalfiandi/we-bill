@@ -9,6 +9,10 @@
     <button
       [disabled]="currentPage <= 1"
       [ngStyle]="{ opacity: currentPage <= 1 ? 0.5 : 1 }"
+      class="transition duration-200 p-1 rounded-md flex justify-center items-center"
+      [ngClass]="{
+        'active:ng-gray-300': currentPage > 1
+      }"
     >
       <img
         src="images/icon/icon-chevron-left.png"
@@ -23,7 +27,13 @@
     </p>
     <button
       [disabled]="currentPage >= totalData"
-      [ngStyle]="{ opacity: currentPage <= 1 && currentPage <= 1 ? 0.5 : 1 }"
+      [ngStyle]="{
+        opacity: currentPage <= 1 && currentPage >= totalPage ? 0.5 : 1
+      }"
+      class="transition duration-200 p-1 rounded-md flex justify-center items-center"
+      [ngClass]="{
+        'active:ng-gray-300': currentPage <= totalPage
+      }"
     >
       <img
         src="images/icon/icon-chevron-right.png"
