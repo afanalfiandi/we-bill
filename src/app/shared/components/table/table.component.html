@@ -1,0 +1,20 @@
+<table class="w-full">
+  <thead>
+    <tr>
+      @for (col of columns; track $index) {
+      <th class="font-semibold uppercase text-gray-400 text-left py-2 text-sm">
+        {{ col.columnName }}
+      </th>
+      }
+    </tr>
+  </thead>
+  <tbody>
+    @for (items of data; track $index) {
+    <tr class="border-t border-gray-300">
+      @for (col of columns; track $index) {
+      <td class="py-5 text-gray-700">{{ items[col.key] }}</td>
+      }
+    </tr>
+    }
+  </tbody>
+</table>

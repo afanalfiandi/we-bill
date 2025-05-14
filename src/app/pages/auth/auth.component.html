@@ -1,1 +1,19 @@
-<p>auth works!</p>
+<app-auth-layout>
+  <div class="grid grid-cols-3 h-full w-full">
+    <div
+      class="col-span-2 border flex justify-center items-center h-full w-full"
+    >
+      <div class="p-5 bg-white rounded-md w-full mx-5">
+        <p class="font-bold text-xl">Order List</p>
+        <p class="text-gray-400">
+          View and manage all transactions with details on status, payment and
+          customer.
+        </p>
+
+        <div class="py-5">
+          <app-table [columns]="column" [data]="data"></app-table>
+        </div>
+      </div>
+    </div>
+  </div>
+</app-auth-layout>
