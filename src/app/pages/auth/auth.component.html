@@ -1,9 +1,7 @@
 <app-auth-layout>
   <div class="grid grid-cols-3 h-full w-full">
-    <div
-      class="col-span-2 border flex justify-center items-center h-full w-full"
-    >
-      <div class="p-5 bg-white rounded-md w-full mx-5">
+    <div class="col-span-2 flex justify-center items-center h-full w-full">
+      <div class="p-5 bg-white rounded-md w-full mx-10">
         <p class="font-bold text-xl">Order List</p>
         <p class="text-gray-400">
           View and manage all transactions with details on status, payment and
@@ -13,6 +11,33 @@
         <div class="py-5">
           <app-table [columns]="column" [data]="data"></app-table>
         </div>
+      </div>
+    </div>
+    <div
+      class="bg-white flex flex-col justify-center items-center h-full w-full"
+    >
+      <div class="flex justify-between items-center -mt-20">
+        <img src="images/app-logo.png" alt="" width="50" height="50" />
+        <div class="ms-3">
+          <p class="font-bold text-2xl">WeBill</p>
+          <p class="text-gray-500">Your POS assistant</p>
+        </div>
+      </div>
+
+      <div class="p-3 mt-5">
+        <p class="font-bold text-xl">Log In</p>
+        <p class="text-gray-500">Please enter your PIN.</p>
+      </div>
+      <div class="p-3 mt-2">
+        <form class="flex flex-col gap-3">
+          <input
+            type="text"
+            placeholder="Enter PIN"
+            class="border border-gray-200 py-2 px-4 w-80 text-gray-500 outline-0 rounded-md"
+          />
+
+          <app-numeric-keyboard></app-numeric-keyboard>
+        </form>
       </div>
     </div>
   </div>

@@ -1,0 +1,8 @@
+<div class="grid grid-cols-3 gap-2">
+  @for (numeric of numericKey; track $index) {
+  <button class="p-3 border rounded-lg border-gray-400">{{ numeric }}</button>
+  }
+
+  <button class="p-3 border rounded-lg border-gray-400">⌫</button>
+  <button class="p-3 border rounded-lg border-gray-400">⏎</button>
+</div>

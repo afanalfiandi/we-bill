@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { AuthLayoutComponent } from '../../shared/layout/auth-layout/auth-layout.component';
 import { TableComponent } from '../../shared/components/table/table.component';
 import { ColumnDTO } from '../../shared/dtos/table.dtos';
+import { NumericKeyboardComponent } from '../../shared/components/numeric-keyboard/numeric-keyboard.component';
 
 @Component({
   selector: 'app-auth',
-  imports: [AuthLayoutComponent, TableComponent],
+  imports: [AuthLayoutComponent, TableComponent, NumericKeyboardComponent],
   templateUrl: './auth.component.html',
   styleUrl: './auth.component.css',
 })
@@ -47,17 +48,17 @@ export class AuthComponent {
       total: 10000,
     },
     {
-      queueID: 'WB123123123',
-      date: 'August 25, 2025 10:21 PM',
-      customer: 'Matt Shadows',
+      queueID: 'WB124124124',
+      date: 'August 25, 2025 10:25 PM',
+      customer: 'Chester Benington',
       serviceType: 'Dine In',
       status: 'New',
       total: 10000,
     },
     {
-      queueID: 'WB123123123',
-      date: 'August 25, 2025 10:21 PM',
-      customer: 'Matt Shadows',
+      queueID: 'WB125125125',
+      date: 'August 25, 2025 10:32 PM',
+      customer: 'Oliver Sykes',
       serviceType: 'Dine In',
       status: 'New',
       total: 10000,

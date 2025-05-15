@@ -11,9 +11,17 @@
   <tbody>
     @for (items of data; track $index) {
     <tr class="border-t border-gray-300">
-      @for (col of columns; track $index) {
+      @for (col of columns; track $index) { @if (col.key !== 'status') {
       <td class="py-5 text-gray-700">{{ items[col.key] }}</td>
-      }
+      } @else {
+      <td class="py-5 text-gray-700">
+        <div
+          class="mx-2 py-1 text-blue-400 text-sm bg-gray-100 rounded-full flex justify-center items-center"
+        >
+          {{ items[col.key] }}
+        </div>
+      </td>
+      } }
     </tr>
     }
   </tbody>
