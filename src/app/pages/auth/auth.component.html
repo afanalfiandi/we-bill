@@ -29,14 +29,25 @@
         <p class="text-gray-500">Please enter your PIN.</p>
       </div>
       <div class="p-3 mt-2">
-        <form class="flex flex-col gap-3">
+        <form
+          class="flex flex-col gap-3"
+          [formGroup]="authForm"
+          (submit)="onLogin()"
+        >
           <input
             type="text"
             placeholder="Enter PIN"
             class="border border-gray-200 py-2 px-4 w-80 text-gray-500 outline-0 rounded-md"
+            formControlName="pin"
           />
-
-          <app-numeric-keyboard></app-numeric-keyboard>
+          @if (authForm.get('pin')?.hasError('required') &&
+          authForm.get('pin')?.touched) {
+          <span class="text-red-300 text-sm">This field is required</span>
+          }
+          <app-numeric-keyboard
+            (selectValue)="onChangeValue($event)"
+            (deleteValue)="onDeleteValue()"
+          ></app-numeric-keyboard>
         </form>
       </div>
     </div>
